@@ -37,9 +37,9 @@ int main()
 
     promedio = (float) acumulador / CANTIDAD_NUMEROS;
 
-    printf("El promedio es: %.2f", promedio);
-    printf("El minimo es: %d", minimo);
-    printf("El maximo es: %d", maximo);
+    printf("El promedio es: %.2f \n", promedio);
+    printf("El minimo es: %d \n", minimo);
+    printf("El maximo es: %d \n", maximo);
 
     return 0;
 
