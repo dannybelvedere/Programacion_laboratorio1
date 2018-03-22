@@ -21,7 +21,7 @@ int main()
 
         acumulador += numero;
 
-        if( i == 1)
+        if( i == 0)
         {
             minimo = numero;
             maximo = maximo;
