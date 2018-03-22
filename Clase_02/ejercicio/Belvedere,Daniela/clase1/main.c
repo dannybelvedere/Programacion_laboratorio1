@@ -40,12 +40,11 @@ int main()
             printf("Te equivocaste en ambos numeros\n");
         }
 
-        printf("¿Desea continuar? s/n \n");
+        printf("Desea continuar? s/n \n");
         fflush(stdin);
         scanf("%c", &seguir);
 
     }while(seguir == 's');
-
 
     return 0;
 }

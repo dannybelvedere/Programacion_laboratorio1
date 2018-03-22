@@ -7,8 +7,8 @@ int main()
 
     int i;
     int numero;
-    float maximo;
-    float minimo;
+    int maximo;
+    int minimo;
     int acumulador;
     float promedio;
 
@@ -24,7 +24,7 @@ int main()
         if( i == 0)
         {
             minimo = numero;
-            maximo = maximo;
+            maximo = numero;
 
         } else if ( numero < minimo)
         {
@@ -38,8 +38,8 @@ int main()
     promedio = (float) acumulador / CANTIDAD_NUMEROS;
 
     printf("El promedio es: %.2f", promedio);
-    printf("El minimo es: %f", minimo);
-    printf("El maximo es: %f", maximo);
+    printf("El minimo es: %d", minimo);
+    printf("El maximo es: %d", maximo);
 
     return 0;
 
