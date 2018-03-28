@@ -1,10 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int sumaEnteros(int numero1, int numero2) {
-    int resultado;
-    resultado = numero1 + numero2;
-    return resultado;
+int sumaEnteros(int numero1, int numero2, float* resultado) {
+    long resultadoCalculo;
+    int retorno = -1;
+
+    resultadoCalculo = numero1 + numero2;
+
+    if(resultadoCalculo < 32767)
+    {
+        *resultado = resultadoCalculo;
+        return 0;
+    }
+    return retorno;
 }
 
 int restarEnteros(int numero1, int numero2) {
@@ -18,10 +26,17 @@ int multiplicarEnteros(int numero1, int numero2) {
     resultado = numero1 * numero2;
     return resultado;
 }
-float dividirEnteros(int numero1, int numero2) {
-    float resultado;
-    resultado = numero1 / (float)numero2;
-    return resultado;
+float dividirEnteros(int numero1, int numero2, float* resultado) {
+    float resultadoCalculo;
+    int retorno = -1;
+    resultadoCalculo = numero1 / (float)numero2;
+
+    if (numero2 != 0)
+    {
+        *resultado = resultadoCalculo;
+        return 0;
+    }
+    return retorno;
 }
 
 
@@ -30,10 +45,7 @@ int main()
     int numero1;
     int numero2;
     int opcionUsuario;
-    int suma;
-    int resta;
-    int producto;
-    float division;
+    float resultado;
 
     printf("Ingrese el primer numero\n");
     scanf("%d",&numero1);
@@ -42,22 +54,36 @@ int main()
     printf("Qué operacion queres hacer?\n 1. Sumar \n 2. Restar \n 3. Multiplicar \n 4. Dividir \n");
     scanf("%d",&opcionUsuario);
 
-    switch (opcionUsuario){
+    switch (opcionUsuario)
+    {
         case 1:
-            suma = sumaEnteros(numero1,numero2);
-            printf("la suma es: %d",suma);
+            if(sumaEnteros(numero1,numero2,&resultado)== 0)
+            {
+              printf("la suma es: %.0f",resultado);
+            } else
+            {
+                printf("La suma supera el valor máximo de un entero");
+            }
+
             break;
         case 2:
-            resta = restarEnteros(numero1,numero2);
-            printf("la resta es: %d",resta);
+            resultado = restarEnteros(numero1,numero2);
+            printf("la resta es: %.0f",resultado);
             break;
         case 3:
-            producto = multiplicarEnteros(numero1,numero2);
-            printf("El producto es: %d",producto);
+            resultado = multiplicarEnteros(numero1,numero2);
+            printf("El producto es: %.0f",resultado);
             break;
         case 4:
-            division = dividirEnteros(numero1,numero2);
-            printf("El producto es: %.2f",division);
+            if(dividirEnteros(numero1,numero2,&resultado) == 0)
+            {
+                printf("La division es: %.2f",resultado);
+            }
+            else
+            {
+                printf("No dividas por cero");
+            }
+
             break;
         default:
              printf("No es una opcion valida");
