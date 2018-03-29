@@ -15,16 +15,28 @@ int sumaEnteros(int numero1, int numero2, float* resultado) {
     return retorno;
 }
 
-int restarEnteros(int numero1, int numero2) {
-    int resultado;
-    resultado = numero1 - numero2;
-    return resultado;
+int restarEnteros(int numero1, int numero2, float* resultado) {
+    long resultadoCalculo;
+    resultadoCalculo = numero1 - numero2;
+    int retorno = -1;
+    if(resultadoCalculo < 32767)
+    {
+        *resultado = resultadoCalculo;
+        return 0;
+    }
+    return retorno;
 }
 
-int multiplicarEnteros(int numero1, int numero2) {
-    int resultado;
-    resultado = numero1 * numero2;
-    return resultado;
+int multiplicarEnteros(int numero1, int numero2, float* resultado) {
+    long resultadoCalculo;
+    resultadoCalculo = numero1 * numero2;
+    int retorno = -1;
+    if(resultadoCalculo < 32767)
+    {
+        *resultado = resultadoCalculo;
+        return 0;
+    }
+    return retorno;
 }
 float dividirEnteros(int numero1, int numero2, float* resultado) {
     float resultadoCalculo;
@@ -67,12 +79,24 @@ int main()
 
             break;
         case 2:
-            resultado = restarEnteros(numero1,numero2);
-            printf("la resta es: %.0f",resultado);
+            if(restarEnteros(numero1,numero2,&resultado)== 0)
+            {
+              printf("la suma es: %.0f",resultado);
+            } else
+            {
+                printf("La resta supera el valor maximo/minimo de un entero");
+            }
+
             break;
         case 3:
-            resultado = multiplicarEnteros(numero1,numero2);
-            printf("El producto es: %.0f",resultado);
+            if(multiplicarEnteros(numero1,numero2,&resultado)== 0)
+            {
+              printf("la suma es: %.0f",resultado);
+            } else
+            {
+                printf("La resta supera el valor maximo/minimo de un entero");
+            }
+
             break;
         case 4:
             if(dividirEnteros(numero1,numero2,&resultado) == 0)
