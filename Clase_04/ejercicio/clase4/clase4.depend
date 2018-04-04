@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1522884283 source:d:\belvedere\programacion_laboratorio1\clase_04\ejercicio\clase4\funciones.c
+1522885287 source:d:\belvedere\programacion_laboratorio1\clase_04\ejercicio\clase4\funciones.c
 	<stdio.h>
 	<stdlib.h>
 
-1522884006 source:d:\belvedere\programacion_laboratorio1\clase_04\ejercicio\clase4\main.c
+1522885179 source:d:\belvedere\programacion_laboratorio1\clase_04\ejercicio\clase4\main.c
 	<stdio.h>
 	<stdlib.h>
 	"funciones.h"
 
-1522884121 d:\belvedere\programacion_laboratorio1\clase_04\ejercicio\clase4\funciones.h
+1522885065 d:\belvedere\programacion_laboratorio1\clase_04\ejercicio\clase4\funciones.h
 
