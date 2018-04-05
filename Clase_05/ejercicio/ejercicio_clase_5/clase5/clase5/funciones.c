@@ -85,14 +85,21 @@ float calcularPromedio (char* mensaje, int cantidadIngresos, float* resultado)
     float v[cantidadIngresos];
     int i;
     float suma;
+    suma = 0;
 
     for (i=0;i<cantidadIngresos;i++)
     {
         printf("%s",mensaje);
         scanf("%f",&v[i]);
+        //suma += v[i];
+    }
+    //Como lo pedia el ejercicio:
+    for (i=0;i<cantidadIngresos;i++)
+    {
         suma += v[i];
     }
 
-    *resultado = suma / i;
+
+    *resultado = suma / cantidadIngresos;
     return 0;
 }
