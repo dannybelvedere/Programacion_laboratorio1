@@ -51,3 +51,31 @@ float getFloat(char* mensaje,
         } while (reintentos >= 0);
         return retorno;
 }
+
+int getChar(char* mensaje,
+            char* mensajeError,
+            int reintentos,
+            char maximo,
+            char minimo,
+            char* ingreso
+            )
+{
+        int retorno = -1;
+        char caracter;
+        do
+        {
+            reintentos--;
+            fflush(stdin);
+            printf("%s", mensaje);
+            scanf("%c", &caracter);
+            if (caracter >= minimo && caracter <= maximo)
+            {
+                *ingreso = caracter;
+                retorno = 0;
+                break;
+            }
+            printf("%s",mensajeError);
+        } while (reintentos >= 0);
+        return retorno;
+
+}

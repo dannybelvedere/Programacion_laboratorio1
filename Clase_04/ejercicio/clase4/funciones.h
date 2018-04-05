@@ -13,4 +13,10 @@ float getFloat(char* mensaje,
                float maximo,
                float minimo,
                float* precio);
+int getChar(char* mensaje,
+            char* mensajeError,
+            int reintentos,
+            char maximo,
+            char minimo,
+            char* ingreso);
 #endif // FUNCIONES_H_INCLUDED
