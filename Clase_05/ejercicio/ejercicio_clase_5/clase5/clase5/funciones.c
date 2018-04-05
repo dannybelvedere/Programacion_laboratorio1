@@ -80,26 +80,74 @@ int getChar(char* mensaje,
 
 }
 
-float calcularPromedio (char* mensaje, int cantidadIngresos, float* resultado)
+float ingresoDatos(char* mensaje,float v[],int cantidadIngresos)
 {
-    float v[cantidadIngresos];
+    int i;
+     for (i=0;i<cantidadIngresos;i++)
+    {
+        printf("%s",mensaje);
+        scanf("%f",&v[i]);
+        //suma += v[i];
+    }
+}
+
+float calcularPromedio (float v[], int cantidadIngresos, float* resultado)
+{
     int i;
     float suma;
     suma = 0;
 
     for (i=0;i<cantidadIngresos;i++)
     {
-        printf("%s",mensaje);
-        scanf("%f",&v[i]);
-        //suma += v[i];
-    }
-    //Como lo pedia el ejercicio:
-    for (i=0;i<cantidadIngresos;i++)
-    {
         suma += v[i];
     }
 
-
     *resultado = suma / cantidadIngresos;
     return 0;
+}
+
+float calcularMaximo(float v[], int cantidadIngresos, float* resultado)
+{
+     int i;
+    float maximo;
+    maximo = 0;
+
+    for (i=0;i<cantidadIngresos;i++)
+    {
+        if(i == 0)
+        {
+          maximo = v[i];
+        }
+        if (maximo < v[i])
+        {
+            maximo = v[i];
+        }
+    }
+
+    *resultado = maximo;
+    return 0;
+
+}
+
+float calcularMinimo(float v[], int cantidadIngresos, float* resultado)
+{
+     int i;
+    float minimo;
+    minimo = 0;
+
+    for (i=0;i<cantidadIngresos;i++)
+    {
+        if(i == 0)
+        {
+          minimo = v[i];
+        }
+        if (minimo > v[i])
+        {
+            minimo = v[i];
+        }
+    }
+
+    *resultado =minimo;
+    return 0;
+
 }
