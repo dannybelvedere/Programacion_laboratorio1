@@ -1,19 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "funciones.h"
+
+#define CANTIDAD_DATOS 5
 int main()
 {
-    float myArray[5];
+    float myArray[CANTIDAD_DATOS];
     float resultado;
     float maximo;
     float minimo;
 
-    ingresoDatos("Ingrese un numero\n",myArray,5);
-    calcularPromedio(myArray,5,&resultado);
+    ingresoDatos("Ingrese un numero\n",myArray,CANTIDAD_DATOS);
+    calcularPromedio(myArray,CANTIDAD_DATOS,&resultado);
     printf("El promedio es %.2f\n", resultado);
-    calcularMaximo(myArray, 5, &maximo);
+    calcularMaximo(myArray, CANTIDAD_DATOS, &maximo);
     printf("El maximo es %.2f\n", maximo);
-    calcularMinimo(myArray, 5, &minimo);
+    calcularMinimo(myArray, CANTIDAD_DATOS, &minimo);
     printf("El minimo es %.2f\n", minimo);
     return 0;
 }
