@@ -21,7 +21,7 @@ int getChar(char* mensaje,
 float ingresoDatos(char* mensaje,
                    float v[],
                    int cantidadIngresos);
-float calcularPromedio (float v[],
+int calcularPromedio (float v[],
                         int cantidadIngresos,
                         float* resultado);
 float calcularMaximo(float v[],

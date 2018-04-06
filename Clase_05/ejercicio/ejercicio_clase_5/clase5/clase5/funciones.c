@@ -92,7 +92,7 @@ float ingresoDatos(char* mensaje,float v[],int cantidadIngresos)
     return 0;
 }
 
-float calcularPromedio (float v[], int cantidadIngresos, float* resultado)
+/*float calcularPromedio (float v[], int cantidadIngresos, float* resultado)
 {
     int i;
     float suma;
@@ -105,13 +105,36 @@ float calcularPromedio (float v[], int cantidadIngresos, float* resultado)
 
     *resultado = suma / cantidadIngresos;
     return 0;
+}*/
+
+int calcularPromedio (float v[], int cantidadIngresos, float* resultado)
+{
+    int i;
+    float suma;
+    int retorno;
+    fflush(stdin);
+    if(cantidadIngresos <= 0)
+    {
+        retorno= -1;
+    }
+    else
+    {
+        retorno =0;
+    }
+    for (i=0;i<cantidadIngresos;i++)
+    {
+        suma += v[i];
+    }
+
+    *resultado = suma / cantidadIngresos;
+    return retorno;
 }
 
 float calcularMaximo(float v[], int cantidadIngresos, float* resultado)
 {
-     int i;
+    int i;
     float maximo;
-    maximo = 0;
+    fflush(stdin);
 
     for (i=0;i<cantidadIngresos;i++)
     {
