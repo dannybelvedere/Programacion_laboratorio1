@@ -10,7 +10,7 @@ int main()
     float maximo;
     float minimo;
 
-    ingresoDatos("Ingrese un numero\n",myArray,CANTIDAD_DATOS);
+    ingresoDatos("Ingrese el numero",myArray,CANTIDAD_DATOS);
     calcularPromedio(myArray,CANTIDAD_DATOS,&resultado);
     printf("El promedio es %.2f\n", resultado);
     calcularMaximo(myArray, CANTIDAD_DATOS, &maximo);

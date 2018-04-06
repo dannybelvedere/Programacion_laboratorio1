@@ -85,7 +85,8 @@ float ingresoDatos(char* mensaje,float v[],int cantidadIngresos)
     int i;
      for (i=0;i<cantidadIngresos;i++)
     {
-        printf("%s",mensaje);
+        printf("%s %d \n",mensaje,i+1);
+
         scanf("%f",&v[i]);
     }
     return 0;
