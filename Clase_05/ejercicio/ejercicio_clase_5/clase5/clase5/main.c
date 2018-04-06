@@ -5,6 +5,21 @@
 #define CANTIDAD_DATOS 0
 int main()
 {
+    int numeritos[5] = {11,3,5,8,2};
+    int flag;
+    int i;
+    int aux;
+    flag = 1;
+    while (flag =1){
+        for (i=1; 1<CANTIDAD_DATOS;i++){
+            if(numeritos[i-1]> numeritos[1])
+            {
+                aux = numeritos[i];
+                numeritos[i-1] = aux;
+            }
+        }
+    }
+
     float myArray[CANTIDAD_DATOS];
     float resultado;
     float maximo;
