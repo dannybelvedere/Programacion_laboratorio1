@@ -87,8 +87,8 @@ float ingresoDatos(char* mensaje,float v[],int cantidadIngresos)
     {
         printf("%s",mensaje);
         scanf("%f",&v[i]);
-        //suma += v[i];
     }
+    return 0;
 }
 
 float calcularPromedio (float v[], int cantidadIngresos, float* resultado)

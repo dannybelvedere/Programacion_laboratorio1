@@ -6,7 +6,6 @@ int getInt(char* mensaje,
            int maximo,
            int minimo,
            int* resultado);
-
 float getFloat(char* mensaje,
                char* mensajeError,
                int reintentos,
@@ -19,8 +18,16 @@ int getChar(char* mensaje,
             char maximo,
             char minimo,
             char* ingreso);
-float ingresoDatos(char* mensaje,float v[],int cantidadIngresos);
-float calcularPromedio (float v[], int cantidadIngresos, float* resultado);
-float calcularMaximo(float v[], int cantidadIngresos, float* resultado);
-float calcularMinimo(float v[], int cantidadIngresos, float* resultado);
+float ingresoDatos(char* mensaje,
+                   float v[],
+                   int cantidadIngresos);
+float calcularPromedio (float v[],
+                        int cantidadIngresos,
+                        float* resultado);
+float calcularMaximo(float v[],
+                     int cantidadIngresos,
+                     float* resultado);
+float calcularMinimo(float v[],
+                     int cantidadIngresos,
+                     float* resultado);
 #endif // FUNCIONES_H_INCLUDED

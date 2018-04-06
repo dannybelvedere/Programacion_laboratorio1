@@ -15,12 +15,5 @@ int main()
     printf("El maximo es %.2f\n", maximo);
     calcularMinimo(myArray, 5, &minimo);
     printf("El minimo es %.2f\n", minimo);
-
-/* float resultado;
-
-   if (calcularPromedio ("\nIngrese un numero\n", 5, &resultado) == 0)
-   {
-       printf("El promedio es %.2f", resultado);
-   }*/
     return 0;
 }
